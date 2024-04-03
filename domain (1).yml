@@ -1,0 +1,173 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - languages_offered
+  - italian_levels_offered
+  - russian_levels_offered
+  - chinese_levels_offered
+  - business_english_levels_offered
+  - how_to_learn_german_course_description 
+  - lecture_schedules
+  - language_exam_schedules
+  - user_1_yusuf1
+  - user_1_yusuf2
+  - courses
+
+entities: 
+  - course_title
+  - course_number
+  - course_level
+  - sws
+  - type_of_exam
+  - exam_requirement
+
+slots:
+  course_title:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: course_title
+
+  course_number:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: course_number
+
+  course_level:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: course_level
+
+  sws:
+    type: float 
+    mappings:
+      - type: from_entity
+        entity: sws
+
+  type_of_exam:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: type_of_exam
+
+  exam_requirement:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: exam_requirement
+
+responses:
+ 
+  utter_greet :
+  - text: |
+        Hello! How can I help you today?
+        Information about:
+        1. Languages Offered
+        2. How to learn German
+        3. Intensive Language Courses
+        4. Lecture Schedule
+        5. Language Exams
+
+  utter_languages_offered :
+  - text: |
+        These are the languages offered:
+        1. German
+        2. English 
+        3. Chinese 
+        4. Italian 
+        5. Russian
+
+  utter_italian_levels_offered :
+  - text: |
+        These are the Italian levels offered:
+        1. Italian A1 / part 1
+        2. Italian A1 / part 2
+        3. Italian A2/ part 1
+
+  utter_russian_levels_offered :
+  - text: |
+        These are the Russian levels offered:
+        1. Russian A1 / part 1
+        2. Russian A1 / part 2
+
+  utter_chinese_levels_offered :
+  - text: |
+        These are the Chinese levels offered:
+        1. Chinese A1 / part 1
+        2. Chinese A1 / part 2
+
+  utter_business_english_levels_offered :
+  - text: |
+        These are the English levels offered:
+        1. Business English B1: English in Business Contexts
+        2. Business English B2: Economy and Society
+        3. Business English B2: English in Business Contexts
+        4. Business English B2: Writing and Communication Skills
+        5. Business English B2 (intensive course)
+        6. Business English C1: Economy and Society
+        7. Business English C1: Strategies and Management
+        8. Business English C1: Writing and Communication Skills
+        9. Business English C1 (intensive course)
+        10. General Technical English B2 (intensive course)
+
+########################## business english 
+  utter_courses :
+  - text: "The course {course_title} ({course_number}) is at level {course_level}. It has {sws} sws and requires a {type_of_exam}. The exam requirement is {exam_requirement}."
+##########################
+
+  utter_how_to_learn_german_course_description :
+  - text: |
+        These are the German levels offered:
+        1. German A1/ part 1 + 2
+        2. German A1/ part 3 + 4
+        3. German A2/ part 1 + 2
+        4. German A2/ part 3 + 4
+        5. German B1/ part 1 + 2
+        6. German B1/ part 3 + 4
+        7. German B2/ part 1 + 2
+        8. German B2/ part 3 + 4
+        9. German B2/ C1 Conversation and Presentation
+        10. German C1/ part 1 + 2
+        11. German C1/ part 3 + 4
+
+  utter_lecture_schedules :
+  - text: "The schedule for the lectures can be found on the University website under Lecture Schedules in the form of a pdf."
+
+  utter_language_exam_schedules :
+  - text: "I am sorry but I do not possess the knowledge about Language Exam Schedules. There is a link on the University website that will take you to the Language Exam Schedules."
+    
+################ yusuf
+  utter_user_1_yusuf1 :
+  - text: "Bypassing Part 1 and directly enrolling in B2 Part 2 is not possible. You are required to provide the proof for Part 1 in order to enroll into Part 2."
+
+  utter_user_1_yusuf2 :
+  - text: "Unfortunately, the intensive course for B2 Part2 is not being offered this semester."
+###############
+
+  utter_contact_language_center :
+  - text: "For further information contact the Language Center."
+
+  utter_sorry_for_inconvinience :
+  - text: "Sorry for the inconvinience."
+
+  utter_did_that_help :
+  - text: "Can I help you with anything else?"
+
+  utter_goodbye :
+  - text: "Bye"
+
+  utter_iamabot :
+  - text: "I am a bot, powered by Rasa."
+
+actions: 
+  - action_courses
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

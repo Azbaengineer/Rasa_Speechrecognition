@@ -1,0 +1,105 @@
+version: "3.1"
+
+stories:
+
+- story: languages offered 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: languages_offered
+  - action: utter_languages_offered 
+  - action: utter_did_that_help
+
+- story: italian levels offered 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: italian_levels_offered
+  - action: utter_italian_levels_offered
+  - action: utter_did_that_help
+
+- story: russian levels offered 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: russian_levels_offered
+  - action: utter_russian_levels_offered
+  - action: utter_did_that_help
+
+- story: chinese levels offered 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: chinese_levels_offered
+  - action: utter_chinese_levels_offered
+  - action: utter_did_that_help
+
+- story: business english levels offered 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: business_english_levels_offered
+  - action: utter_business_english_levels_offered
+  - action: utter_did_that_help
+
+###################################### for business english
+- story: courses
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: courses
+  - action: utter_courses
+#############################################
+
+- story: how to learn german course description 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: how_to_learn_german_course_description
+  - action: utter_how_to_learn_german_course_description
+  - action: utter_did_that_help
+
+- story: lecture schedules 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: lecture_schedules
+  - action: utter_lecture_schedules
+  - action: utter_did_that_help
+
+- story: language exam schedules
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: language_exam_schedules
+  - action: utter_language_exam_schedules
+  - action: utter_sorry_for_inconvinience
+  - action: utter_did_that_help
+
+#yusuf
+- story: user 1 yusuf1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: user_1_yusuf1
+  - action: utter_user_1_yusuf1
+  - action: utter_contact_language_center
+
+- story: user 1 yusuf2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: user_1_yusuf2
+  - action: utter_user_1_yusuf2
+  - action: utter_did_that_help
+
+- story: bot_challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+

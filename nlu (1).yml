@@ -1,0 +1,105 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: languages_offered 
+  examples: |
+    - which languages are offered
+    - what are the languages offered 
+    - offered languages 
+    - is italian offered 
+    - is russian offered 
+    - is english offered 
+    - is german offered
+    - is chinese offered 
+
+- intent: italian_levels_offered 
+  examples: |
+    - what are the italian levels offered 
+    - course description for italian
+
+- intent: russian_levels_offered 
+  examples: |
+    - what are the russian levels offered 
+    - course description for russian
+
+- intent: chinese_levels_offered 
+  examples: |
+    - what are the chinese levels offered 
+    - course description for chinese 
+    - i'm interested in intermediate levels. Can you provide more information about the content covered in those courses and any prerequisites? 
+
+- intent: business_english_levels_offered 
+  examples: |
+    - what are the business english levels offered 
+    - can you list the business english levels offered
+
+################# for business english 
+- intent: courses
+  examples: |
+    - Can you tell me about the course [course_number]?
+    - Provide details about course number [course_number].
+###################
+
+- intent: how_to_learn_german_course_description
+  examples: |
+    - what are the german levels offered 
+    - course description
+
+- intent: lecture_schedules
+  examples: |
+    - where can i find the lecture schedule for [langugage]
+    - what is the schedule for [language]
+
+- intent: language_exam_schedules
+  examples: |
+    - where can i find the exam schedule for [langugage]
+    - when is the exam for [language]
+
+#yusuf 
+- intent: user_1_yusuf1
+  examples: |
+    - I was wondering if I can bypass Part 1 and directly enroll in Part 2
+    - Can I skip B2 Part 1 and directly enroll in Part 2
+
+- intent: user_1_yusuf2
+  examples: |
+    - I'm wondering if I can take the German Intensive course for B2 Part 2
+    - Is German Intensive course for B2 Part 2 offered 
+    - German Intensive course for B2 Part 2 offered 
+    - University is offereing German Intensive course for B2 Part 2
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
